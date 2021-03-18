@@ -35,6 +35,14 @@ public class PlayGame {
         
         Game game = new Game("Card Flip", players, 5);
         System.out.println(game.toString());
+        
+        String[] suits = new String[4];
+        suits[0] = "Hearts";
+        suits[1] = "Diamonds";
+        suits[2] = "Spades";
+        suits[3] = "Clubs";
+        
+        GroupOfCards gc = new GroupOfCards(suits, 13);
     }
     
 }
