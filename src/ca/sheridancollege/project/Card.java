@@ -13,6 +13,7 @@ package ca.sheridancollege.project;
  */
 public abstract class Card {
     //default modifier for child classes
+
     private String suit;
     private int rank;
 
@@ -30,5 +31,12 @@ public abstract class Card {
     public String toString(){
         return "Card{" + suit + rank + "}";
     }
+
+
+    /**
+     * Students should implement this method for their specific children classes
+     *
+     * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
+     */
 
 }

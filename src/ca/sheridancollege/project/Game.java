@@ -14,6 +14,7 @@ import java.util.ArrayList;
  * @author dancye
  * @author Paul Bonenfant Jan 2020
  */
+
 public class Game{
 
     private final String gName;//the title of the game
