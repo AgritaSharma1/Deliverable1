@@ -19,10 +19,19 @@ public class Game{
 
     private final String gName;//the title of the game
     private Player[] players = new Player[2];// the players of the game
+    private int rounds;
 
-    public Game(String gName) {
+
+    public Game(String gName, Player[] players, int rounds) {
         this.gName = gName;
+        this.players = players;
+        this.rounds = rounds;
     
+    }
+
+    @Override
+    public String toString() {
+        return "The game " + gName + " will be played between the players " + players[0] + " and " + players[1] + ". The number of rounds will be " + rounds  + "."; //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
@@ -55,5 +64,13 @@ public class Game{
      * When the game is over, use this method to declare and display a winning player.
      */
     public void declareWinner(){};
+
+    public int getRounds() {
+        return rounds;
+    }
+
+    public void setRounds(int rounds) {
+        this.rounds = rounds;
+    }
 
 }//end class

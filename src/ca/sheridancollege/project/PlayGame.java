@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package ca.sheridancollege.project;
+import java.util.*;
 
 /**
  *
@@ -17,9 +18,23 @@ public class PlayGame {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Game game = new Game("Card flip");
-        System.out.println("Wellcome to the Card Game:");
+        System.out.println("Welcome");
         System.out.println("Please register yourselves here: ");
+        
+        Scanner input1 = new Scanner(System.in);
+        System.out.println("Name of Player 1: ");
+        Player player1 = new Player(input1.next());
+        
+        Scanner input2 = new Scanner(System.in);
+        System.out.println("Name of Player 2: ");
+        Player player2 = new Player(input2.next());
+        
+        Player[] players = new Player[2];
+        players[0] = player1;
+        players[1] = player2;
+        
+        Game game = new Game("Card Flip", players, 5);
+        System.out.println(game.toString());
     }
     
 }

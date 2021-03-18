@@ -11,7 +11,12 @@ package ca.sheridancollege.project;
  * @author dancye
  * @author Paul Bonenfant Jan 2020
  */
-public abstract class Player {
+public class Player {
+
+    @Override
+    public String toString() {
+        return Pname; //To change body of generated methods, choose Tools | Templates.
+    }
 
     private String Pname; //the unique name for this player
 
@@ -44,6 +49,6 @@ public abstract class Player {
      * The method to be overridden when you subclass the Player class with your specific type of Player and filled in
      * with logic to play your game.
      */
-    public abstract void play();
+    public void play(){};
 
 }
