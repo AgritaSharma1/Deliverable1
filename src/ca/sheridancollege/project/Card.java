@@ -4,16 +4,16 @@
  * Add your name as an author and the date!
  */
 package ca.sheridancollege.project;
-
+import java.util.*;
 /**
  * A class to be used as the base Card class for the project. Must be general enough to be instantiated for any Card
  * game. Students wishing to add to the code should remember to add themselves as a modifier.
  *
  * @author dancye
  */
-public abstract class Card {
+public class Card {
     //default modifier for child classes
-
+    
     private String suit;
     private int rank;
 
@@ -21,6 +21,8 @@ public abstract class Card {
         this.suit = suit;
         this.rank = rank;
     }
+    
+    
 
     /**
      * Students should implement this method for their specific children classes

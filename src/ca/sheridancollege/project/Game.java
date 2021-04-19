@@ -5,7 +5,7 @@
  */
 package ca.sheridancollege.project;
 
-import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * The class that models your game. You should create a more specific child of this class and instantiate the methods
@@ -58,7 +58,33 @@ public class Game{
     /**
      * Play the game. This might be one method or many method calls depending on your game.
      */
-    public void play(){};
+    public Card[] start(){
+        Random random = new Random();
+        String[] suits = new String[4];
+        suits[0] = "Hearts";
+        suits[1] = "Diamonds";
+        suits[2] = "Spades";
+        suits[3] = "Clubs";
+        
+        
+        int randomSuit1 =  random.nextInt(4);
+        String suit1 = suits[randomSuit1];
+        int randomNum1 = random.nextInt(13);
+        
+        int randomSuit2 =  random.nextInt(4);
+        String suit2 = suits[randomSuit2];
+        int randomNum2 = random.nextInt(13);
+        
+        Card card1 = new Card(suit1, (randomNum1+1));
+        Card card2 = new Card(suit2, (randomNum2+1));
+        
+        Card[] cardList = new Card[2];
+        cardList[0] = card1;
+        cardList[1] = card2;
+        
+        return cardList;
+        
+    }
 
     /**
      * When the game is over, use this method to declare and display a winning player.

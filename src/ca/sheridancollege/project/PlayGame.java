@@ -10,11 +10,13 @@ import java.util.*;
  *
  * @author agrit
  */
-public class PlayGame {
+public class PlayGame{
 
     /**
      * @param args the command line arguments
      */
+    
+    
     public static void main(String[] args) {
         // TODO code application logic here
         
@@ -36,13 +38,36 @@ public class PlayGame {
         Game game = new Game("Card Flip", players, 5);
         System.out.println(game.toString());
         
-        String[] suits = new String[4];
-        suits[0] = "Hearts";
-        suits[1] = "Diamonds";
-        suits[2] = "Spades";
-        suits[3] = "Clubs";
+        Scanner input3 = new Scanner(System.in);
+        System.out.println("Enter '0' to continue: ");
+        int confirm = input3.nextInt();
         
-        GroupOfCards gc = new GroupOfCards(suits, 13);
+        if(confirm == 0){
+            Card[] cardList = new Card[2];
+            cardList = game.start();
+            Scanner input4 = new Scanner(System.in);
+            System.out.println("Now, you have two options : \n1. Play \n2. "
+                    + "Swap and then Play \nEnter 1 or 2:");
+            int choice = input4.nextInt();
+            
+            if (choice==1){
+                
+            }
+            else if(choice==2){
+                
+            }
+            else{
+                System.out.println("Not a valid input !");
+            }
+            
+            
+        }
+        
+        else{
+            System.out.println("Invalid Input !");
+        }
+        
+        
     }
     
 }
