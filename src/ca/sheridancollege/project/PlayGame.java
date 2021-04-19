@@ -19,7 +19,8 @@ public class PlayGame{
     
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        int player1Score = 0;
+        int player2Score = 0;
         System.out.println("Welcome");
         System.out.println("Please register yourselves here: ");
         
@@ -43,24 +44,26 @@ public class PlayGame{
         int confirm = input3.nextInt();
         
         if(confirm == 0){
-            Card[] cardList = new Card[2];
-            cardList = game.start();
-            Scanner input4 = new Scanner(System.in);
-            System.out.println("Now, you have two options : \n1. Play \n2. "
+            for(int i = 0; i <= game.getRounds(); i++){
+                Card[] cardList = new Card[2];
+                cardList = game.start();
+                Scanner input4 = new Scanner(System.in);
+                System.out.println("Now, you have two options :"
+                    + " \n1. Play \n2. "
                     + "Swap and then Play \nEnter 1 or 2:");
-            int choice = input4.nextInt();
+                int choice = input4.nextInt();
             
-            if (choice==1){
+                if (choice==1){
                 
-            }
-            else if(choice==2){
+                    }
+                else if(choice==2){
                 
-            }
-            else{
-                System.out.println("Not a valid input !");
-            }
-            
-            
+                }
+                else{
+                    System.out.println("Not a valid input !");
+                    break;
+                }
+            }    
         }
         
         else{
