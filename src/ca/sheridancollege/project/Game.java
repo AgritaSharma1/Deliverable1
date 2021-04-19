@@ -78,18 +78,41 @@ public class Game{
         Card card1 = new Card(suit1, (randomNum1+1));
         Card card2 = new Card(suit2, (randomNum2+1));
         
-        Card[] cardList = new Card[2];
+        Card[] cardList = new Card[3];
         cardList[0] = card1;
         cardList[1] = card2;
         
         return cardList;
         
     }
-
+    
+    public Card[] swap(Card[] cardList){
+        int i = 0;
+        int j = 1;
+        int k = 2;
+        cardList[k] = cardList[j];
+        cardList[j] = cardList[i];
+        cardList[i] = cardList[k];
+        return cardList;
+        
+    }
+    
+    
+    
     /**
      * When the game is over, use this method to declare and display a winning player.
      */
-    public void declareWinner(){};
+    public void declareWinner(int score1, int score2){
+        if (score1 > score2){
+            System.out.println("Player 1 wins !! Congratulations 'CARD FLIPPER' !!");
+        }
+        else if(score1<score2){
+            System.out.println("Player 1 wins !! Congratulations 'CARD FLIPPER' !!");
+        }
+        else{
+            System.out.println("Ooops !! It's a tie !!");
+        }
+    }
 
     public int getRounds() {
         return rounds;
