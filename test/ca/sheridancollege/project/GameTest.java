@@ -16,9 +16,9 @@ import static org.junit.Assert.*;
  *
  * @author agrit
  */
-public class PlayGameTest {
+public class GameTest {
     
-    public PlayGameTest() {
+    public GameTest() {
     }
     
     @BeforeClass
@@ -37,16 +37,22 @@ public class PlayGameTest {
     public void tearDown() {
     }
 
+
     /**
-     * Test of main method, of class PlayGame.
+     * Test of declareWinner method, of class Game.
      */
     @Test
-    public void testMain() {
-        System.out.println("main");
-        String[] args = null;
-        PlayGame.main(args);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testDeclareWinner() {
+        System.out.println("declareWinner");
+        int score1 = 1;
+        int score2 = 0;
+        Player[] players = new Player[2];
+        players[0] = new Player("player1");
+        players[1] = new Player("player2");
+        Game instance = new Game("Card Flip", players, 5);
+        instance.declareWinner(score1, score2);
+        
     }
+
     
 }
